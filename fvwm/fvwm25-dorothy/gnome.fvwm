@@ -1,0 +1,44 @@
+Module FvwmGtk
+*FvwmGtk: Destroy gnome-applications
+#*FvwmGtk: Menu gnome-all
+#*FvwmGtk: Title "Gnome Menus"
+#*FvwmGtk: Separator
+#*FvwmGtk: Destroy gnome-sys
+
+#fvwm-menu-desktop --type gtk --dir /usr/gnome/share/applications
+#fvwm-menu-desktop --type fvwm --dir /usr/gnome/share/applications
+*FvwmGtk: Menu "Gnome-applications"
+*FvwmGtk: Title "Gnome applications" 
+*FvwmGtk: Separator
+*FvwmGtk: Item "Help" "Exec exec yelp" 
+*FvwmGtk: Item "Print Manager" "Exec exec gnome-print-manager" 
+*FvwmGtk: Item "Terminal" "Exec exec gnome-terminal" 
+*FvwmGtk: Item "GNOME Control Center" "Exec exec gnome-control-center" 
+*FvwmGtk: Item "Home Folder" "Exec exec nautilus" 
+*FvwmGtk: Item "Text Editor" "Exec exec gedit " 
+*FvwmGtk: Item "Eye of Gnome Image Viewer" "Exec exec eog " 
+*FvwmGtk: Item "Hex Editor" "Exec exec ghex2 " 
+*FvwmGtk: Item "Performance Meter" "Exec exec gnome-perfmeter" 
+*FvwmGtk: Item "Calculator" "Exec exec gnome-calculator" 
+*FvwmGtk: Item "Character Map" "Exec exec gnome-character-map" 
+*FvwmGtk: Item "Search for Files" "Exec exec gnome-search-tool" 
+*FvwmGtk: Item "CD Player" "Exec exec gnome-cd" 
+*FvwmGtk: Item "Sound Recorder" "Exec exec gnome-sound-recorder" 
+*FvwmGtk: Item "Recording level monitor" "Exec exec vumeter -r" 
+*FvwmGtk: Item "Volume monitor" "Exec exec vumeter" 
+*FvwmGtk: Item "Glade Interface Designer" "Exec exec glade-2" 
+*FvwmGtk: Item "Gataxx" "Exec exec gataxx" 
+*FvwmGtk: Item "Glines" "Exec exec glines" 
+*FvwmGtk: Item "Gnect" "Exec exec gnect" 
+*FvwmGtk: Item "Gnibbles" "Exec exec gnibbles" 
+*FvwmGtk: Item "Gnobots II" "Exec exec gnobots2" 
+*FvwmGtk: Item "GNOME Stones" "Exec exec gnome-stones" 
+*FvwmGtk: Item "Gnometris" "Exec exec gnometris" 
+*FvwmGtk: Item "GNOME Mines" "Exec exec gnomine" 
+*FvwmGtk: Item "Gnotravex" "Exec exec gnotravex" 
+*FvwmGtk: Item "Gnotski" "Exec exec gnotski" 
+*FvwmGtk: Item "GTali" "Exec exec gtali" 
+*FvwmGtk: Item "Mahjongg" "Exec exec mahjongg" 
+*FvwmGtk: Item "Same GNOME" "Exec exec same-gnome" 
+*FvwmGtk: Item "Screensaver" "Exec exec xscreensaver-demo --crapplet"
+

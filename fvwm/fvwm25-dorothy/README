@@ -1,0 +1,18 @@
+Notes by Migo: I have patched the configuration so that you may install it
+to any place. For example, unpack fvwm-dorothy.tar.gz to you home directory
+and then execute:
+
+  Restart fvwm2 -f ~/fvwm-dorothy/rc.fvwm
+
+I also fixed some small glitches in window buttons.
+Here are the original notes, but they are not really needed now:
+
+-----------------------------------------------------------------------------
+
+Install this directory as ~/.fvwm.  Link rc.fvwm to .fvwm2rc as follows:
+
+ln -s rc.fvwm .fvwm2rc
+
+This makes it easier to grep the configuration files, and also prevents
+me from over-writing your .fvwm2rc when you install, which might make
+you very angry.

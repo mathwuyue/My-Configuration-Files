@@ -1,0 +1,27 @@
+############################################################################
+# FvwmButtons
+#
+
+Colorset 8 fg white, bg #888888, fgsh black, RootTransparent Buffer, Tint #000000 50
+Style FvwmButtons NoTitle, StaysOnBottom, Sticky, WindowListSkip, CirculateSkipIcon, CirculateSkip
+Style FvwmButtons HandleWidth 2, NeverFocus, Layer 1
+
+*FvwmButtons: Colorset 8
+*FvwmButtonsFont -adobe-helvetica-bold-r-*-*-18-*-*-*-*-*-*-*
+*FvwmButtonsGeometry 864x36+0-0
+*FvwmButtons: Rows 1
+*FvwmButtons: Columns 12
+
+*FvwmButtons (Size 1x1, Title "Restart", Icon $[fvwm_icon]/fvwm.png,	Restart)
+*FvwmButtons (Size 22x1, Terminal	$[fvwm_icon]/term.png	Exec "xterm" $[fvwm_term] &)
+*FvwmButtons (Size 22x1, Emacs	$[fvwm_icon]/emacs.png	Exec "Emacs" emacs -geometry =80x78-0+0 &)
+*FvwmButtons (Size 22x1, Browser	$[fvwm_icon]/firefox.png	Exec "Browser" $[fvwm_browser])
+*FvwmButtons(Size 22x1, Swallow XBiff 'Exec xbiff &')
+*FvwmButtons(Size 22x1,Swallow(UseOld,NoKill) "xload" \
+	`Exec xload -title xload -bg SteelBlue3 -update 3 -nolabel &`)
+*FvwmButtons(Size 22x1,Swallow XEyes 'Exec xeyes -center LightGrey &')
+*FvwmButtons(Size 36x1,Swallow XClock 'Exec xclock -d -twentyfour -fg white -bg SteelBlue3 &')
+*FvwmButtons(Size 26x1,Swallow "FvwmPager" "FvwmPager 0 0")
+*FvwmButtons: (Size 16x1 Lock Screen	Exec exec xscreensaver-command --lock)
+
+

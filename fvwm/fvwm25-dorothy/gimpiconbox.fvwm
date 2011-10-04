@@ -1,0 +1,15 @@
+Colorset 10 fg black, bg white, NoShape, RootTransparent Buffer
+Colorset 11 fg black, bg white, NoShape, RootTransparent Buffer, Tint #5a8ade 60
+Colorset 12 fg black, bg white, NoShape, RootTransparent Buffer, Tint #f6f6f6 20
+
+Style "Gimp" NoIcon, WindowListSkip
+Style "GimpIcons" Icon wilber.xpm, MiniIcon mini/gimp.xpm, WindowListHit
+
+*GimpIcons: Colorset 10
+*GimpIcons: FrameWidth  2 2
+
+# These are bound to the icons inside the icon box
+*GimpIcons: Mouse       1       Click           Iconify
+*GimpIcons: Mouse       2       Click           Iconify -1, Focus
+*GimpIcons: Mouse       3       Click           Module FvwmIdent
+

@@ -1,0 +1,3 @@
++    "Tadg"	exec Eterm --name Darwin --title tadg --icon-name tadg -e ssh tadg
++    "Aracnet"	exec Eterm --name ssh --title aracnet --icon-name aracnet -e ssh mokuren@shell.aracnet.com
++    "Charon"	exec Eterm --name ssh --title charon --icon-name charon -e ssh charon.mentorg.com

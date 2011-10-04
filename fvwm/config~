@@ -1,0 +1,187 @@
+############################################################################
+# Eric's Big Blue-Steel Desktop
+#	by Eric S. Raymond <esr@thyrsus.com> http://www.tuxedo.org/~esr
+#
+# This Configuration File is modified from Eris S. Raymod's fvwm conf file
+# Also Include Glass style files from Dorothy Robinson:
+#      http://www.twobarleycorns.net/fvwm-decors.html
+# 
+#########################################################################
+
+
+
+###
+# Fvwm Variables
+#
+SetEnv fvwm_folder	$[HOME]/.fvwm
+SetEnv fvwm_img 	$[fvwm_folder]/images
+SetEnv fvwm_wallpaper 	$[fvwm_img]/wallpaper.png
+SetEnv fvwm_icon 	$[fvwm_folder]/icons
+SetEnv fvwm_scrpt 	$[fvwm_folder]/scripts
+
+SetEnv fvwm_term	/usr/bin/rxvt
+SetEnv fvwm_browser	/usr/bin/iceweasel
+
+###
+# FvwmButtons
+#
+Read $[fvwm_folder]/button.fvwm
+
+
+##############################################################################
+# MENU Setup
+#
+Read $[fvwm_folder]/menu.fvwm
+
+
+############################################################################
+# Style Settings
+#
+Read $[fvwm_folder]/style.fvwm
+
+
+############################################################################
+# MOUSE Setup
+#
+Read $[fvwm_folder]/mouse.fvwm
+
+
+############################################################################
+# KEYBOARD Setup
+#
+Read $[fvwm_folder]/keymap.fvwm
+
+
+############################################################################
+# MISC Setup
+#
+# Uncomment this to make windows auto-raise after [x] milliseconds 
+Module FvwmAuto 25
+
+# Auto Place Icons is a nice feature (Left Top Right Bottom)
+Style "*" IconBox 0 1030 750 1550
+
+# Keep the last focus while in root window
+Style "*" ClickToFocus
+
+# Click/release must occur in <n milliseconds to be a "click"
+ClickTime 250
+
+# I have fast graphics, so always do opaque moves
+OpaqueMoveSize 100
+
+
+############################################################################
+# WINDOW Placement
+#
+# SmartPlacement makes new windows pop-up in blank regions of screen 
+#Style "*" SmartPlacement
+
+# If SmartPlacement fails, this places it randomly instead of making you do it
+#Style "*" RandomPlacement
+Style * TileCascadePlacement, MinOverlapPercentPlacement
+Style * DecorateTransient
+
+
+###########################################################################
+# Virtual Desktops
+#
+DesktopSize 3x3
+# EdgeScroll 50 50         # How much percentage of a page will be moved
+# EdgeResistance 150 150   # Time for resistance
+EdgeThickness 0            # The width of the Edge
+*FvwmPager: Balloons All
+*FvwmPager: Font none
+
+
+############################################################################
+# Functions
+#
+# DestroyFunc FuncName
+# AddToFunc FuncName
+# + I (Action to happen Immediately)
+# + C (Click to Happen)
+# + D (Double Click to Happen)
+# + H ('Hold' To Happen)
+# + M ('motion'(move) to Happen
+# $0, $1, $2.. for variables sent into the function.
+#
+
+
+
+#############################################################################
+# START-UP Functions
+#
+AddToFunc "InitFunction" "I" Module FvwmButtons
++		"I" Next [!iconic CurrentScreen xterm] Focus
++		"I" CursorMove 30 40
+
+DestroyFunc StartFunction
+AddToFunc StartFunction
++	  I	Module	FvwmCommandS
++	  I	Module	FvwmAnimate
++	  I	Module	FvwmEvent
++	  I	Test (Init)	Exec exec xscreensaver
++	  I	Test (Init)	Exec exec fvwm-root --dither --retain-pixmap $[fvwm_wallpaper]
++	  I	Test (Init)	Exec exec tilda
+
+AddToFunc "RestartFunction" "I" Module FvwmButtons
++		"I" Next [!iconic CurrentScreen xterm] Focus
++		"I" CursorMove 30 40
+
+
+
+############################################################################
+# COMPLEX FUNCTIONS
+#
+AddToFunc Move-or-Raise		"I" Raise
++				"M" Move
++				"D" Lower
+
+AddToFunc Move-or-Raise2        "M" Raise
++				"M" Move
++				"D" Lower
+
+# This maximize percentage gives a 64-line window and leaves the
+# icons and toolbar unobscured (100 gives 77 lines)
+AddToFunc Maximize-Func         "C" Maximize     0 85
++                               "D" Maximize     100 100
+
+AddToFunc Move-or-Iconify       "I" Raise
++                               "M" Move
++                               "D" Iconify
+
+AddToFunc Resize-or-Raise       "I" Raise
++                               "M" Resize
++                               "D" Lower
+
+AddToFunc Resize-or-Raise2      "M" Raise
++                               "M" Resize
++                               "D" Lower
+
+AddToFunc Iconify-and-Raise     "I" Iconify
++                               "I" Raise
+
+
+##########################################################################
+# Launching Functions
+#
+DestroyFunc FvwmXTerm
+AddToFunc FvwmXTerm
++	  I	Exec exec $[fvwm_term]
+
+DestroyFunc FvwmEmacs
+AddToFunc FvwmEmacs
++	  I	Exec exec emacs
+
+DestroyFunc FvwmBrowser
+AddToFunc FvwmBrowser
++	  I	Exec exec $[fvwm_browser]
+
+DestroyFunc FvwmLock
+AddToFunc FvwmLock
++	  I	Exec exec xscreensaver-command --lock
+
+
+# fvwm config file end up here
+###########################################################################

@@ -1,0 +1,140 @@
+# Right button root menu - FVWM configuration
+
+AddToMenu System "Fvwm Controls" Title
++    "Fvwm Modules"%mini/mini.modules.xpm%            Popup Module-Popup
++    "Fvwm Window Ops"         Popup Window-Ops
++    "Fvwm Simple Config Ops"  Popup Misc-Ops
++    "List of Windows"	      WindowList
++    "Display Controls"	      Popup DisplayControls
++    "" Nop
++    "Decors"%mini/mini.eye2.xpm%          Popup My-Decors
++    "Reload Menus"           Function ReloadMenus
++    "Reload Icons"           Read icons.fvwm
++    "" Nop
++    "Backdrops Menu"              Popup My-Backdrops
++    "Choose Backdrop"	      exec choosebg
++    "Random Backdrop"	      exec newbackground
++    "" Nop
++    "Refresh"	              Refresh
++    "Restart"	              Restart
++    "" Nop
++    "Exit"		      Quit
+
+############################################################################
+AddToMenu DisplayControls "Display Characteristics" Title
++	"Disable all outside access to the Display" exec xhost -
++	"Enable any outside access to the Display"  exec xhost +
+
+AddToMenu Misc-Ops "Misc Config Opts" Title
++   "Sloppy Focus"            ChangeDefaultFocus SloppyFocus
++   "Click To Focus"          ChangeDefaultFocus ClickToFocus
++   "Focus Follows Mouse"     ChangeDefaultFocus FocusFollowsMouse
++   "" Nop
++   "Colormap Follows Mouse"  ColormapFocus FollowsMouse
++   "Colormap Follows Focus"  ColormapFocus FollowsFocus
++   "" Nop
++   "Full Paging ON"          EdgeScroll 100 100
++   "All Paging OFF"          EdgeScroll 0 0
++   "Horizontal Paging Only"  EdgeScroll 100 0
++   "Vertical Paging Only"    EdgeScroll 0 100
++   "Partial Paging"          EdgeScroll 50 50
++   "Full Paging & Edge Wrap" EdgeScroll 100000 100000
+ 
+DestroyFunc PlainDecor
+AddToFunc PlainDecor
++ I DestroyModuleConfig FvwmButtons
++ I KillModule FvwmButtons
++ I KillModule FvwmPager
++ I Colorset 0 fg $0, bg $1, TiledPixmap, Pixmap
++ I Colorset 1 fg $1, bg $0, TiledPixmap, Pixmap
++ I Style * IconTitleColorset
++ I Style * IconBackgroundColorset
++ I Style * HilightIconTitleColorset
++ I Read $./plain.decor
++ I Module FvwmPager 0 1
++ I Module FvwmButtons
+
+DestroyFunc SwitchDecor
+AddToFunc SwitchDecor
++ I DestroyModuleConfig FvwmButtons
++ I KillModule FvwmButtons
++ I KillModule FvwmPager
++ I Style * IconTitleColorset
++ I Style * HilightIconTitleColorset
++ I Style * IconBackgroundColorset
++ I Read $./$0
++ I Style FvwmButtons BorderWidth 0
++ I Module FvwmPager 0 1
++ I Module FvwmButtons
+
+AddToFunc CreateBackdropMenu
++ I PipeRead "fvwm-menu-directory -d '$0' -exec-file '^Esetroot -scale '"
+
+AddToMenu My-Backdrops
++ MissingSubmenuFunction CreateBackdropMenu
++ "Backdrops" Popup $[HOME]/images/DesktopConsoles
+
+AddToMenu My-Decors "Decors" Title
++       "ABC"           Function SwitchDecor abc.decor
++       "Apple Aqua"    Function SwitchDecor aqua.decor
++       "Award"         Function SwitchDecor award.decor
++       "BlueGray"      Function SwitchDecor bluegray.decor
++       "Blue Wing"     Function SwitchDecor blue_wing.decor
++       "Celtic"        Function SwitchDecor celtic.decor
++       "Emerald"       Function SwitchDecor emerald.decor
++       "Glass"         Function SwitchDecor glass.decor
++       "Gold Leaf"     Function SwitchDecor goldleaf.decor
++       "Leather"       Function SwitchDecor leather.decor
++       "Marble"        Function SwitchDecor marble.decor
++       "MWM"           Function PlainDecor #cdc7b8 #97715a
++       "Pink Pearl"    Function SwitchDecor pinkpearl.decor
++       "Purple and Silver"  Function SwitchDecor purpsilver.decor
++       "Rainbow"       Function SwitchDecor rainbow.decor
++       "Red and Gold"  Function SwitchDecor redgold.decor
++       "Silver"        Function SwitchDecor silver.decor
++       "Springtime"    Function SwitchDecor springtime.decor
++       "Starry"        Function SwitchDecor starry.decor
++       "Stone Age"     Function SwitchDecor stoneage.decor
++       "Water"         Function SwitchDecor water.decor
++       "Wine"          Function SwitchDecor wine.decor
++       "Wood"          Function SwitchDecor wood.decor
++       "Plain Decors"        Popup Fractal-Decors
+
+AddToMenu Fractal-Decors "Fractal Decors" Title
++       "Circled Vine"   Function PlainDecor #847383 #403b5b
++       "Fanar"          Function PlainDecor #cdc7b8 #97715a
++       "Old Lace"       Function PlainDecor #b197a2 #f7eecf
++       "Startdust"      Function PlainDecor #8c95b4 #3d3571
++       "Sunset Flowers" Function PlainDecor #8a9a8f #3b3d4a
++       "Swimming"       Function PlainDecor #a08895 #684f62
++       "Twist of Fate"  Function PlainDecor #938988 #364147
+                        
+AddToMenu Module-Popup  "FvwmModules" Title
++   "Identify"      Module  FvwmIdent
++   "WinList"       Module  FvwmWinList
++   "" Nop
++   "Tile Windows"   Module  FvwmRearrange -tile 2 3 98 98 -mn 2
++   "Cascade Windows" Module  FvwmRearrange -cascade -resize 5 5 60 60 -incx 2 -incy 2 -noraise
++   "" Nop
++   "FvwmConsole"%mini/mini.sh1.xpm%       Module FvwmConsole -geom 80x15
++   "Button-Bar"    Module  FvwmButtons
++   "Pager"%mini/mini.pager.xpm%         Module  FvwmPager 0 1
++   "TaskBar"%mini/mini.desktop.xpm%       Module FvwmTaskBar
++   "Wharf"       Module FvwmWharf
++   "IconBox"       Module  FvwmIconBox
++   "IconMan"       Module  FvwmIconMan
++   "" Nop
++   "AutoRaise"     Module  FvwmAuto 800 Raise Nop
++   "Stop AutoRaise" KillModule FvwmAuto
++   "Audio"         Module FvwmAudio
++   "Stop Audio"    KillModule FvwmAudio
++   "ScrollBar"     Module  FvwmScroll 50 50
++   "" Nop
++   "Fvwm Backer"    Module  FvwmBacker
++   "Stop Backer"    KillModule  FvwmBacker
++   "Banner"        Module  FvwmBanner
++   "Talk"          Module  FvwmTalk
++   "" Nop
++   "Debug"       Module FvwmDebug
++   "Stop Debug"       KillModule FvwmDebug
+

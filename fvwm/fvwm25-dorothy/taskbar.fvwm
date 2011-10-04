@@ -1,0 +1,28 @@
+Style "FvwmTaskBar" Sticky, NoTitle, NoHandles, BorderWidth 1, HandleWidth 1, WindowListSkip
+
+*FvwmTaskBar: Colorset 1
+*FvwmTaskBar: IconColorset 0
+*FvwmTaskBar: FocusColorset 1
+*FvwmTaskBar: NoBrightFocus
+
+*FvwmTaskBar: Geometry +0+0
+*FvwmTaskBar: AutoStick
+*FvwmTaskBar: UseSkipList
+
+*FvwmTaskBar: Font     -adobe-helvetica-medium-r-*-*-10-*-*-*-*-*-*-*
+# The manpage says the start menu uses SelFont, but it doesn't seem to
+*FvwmTaskBar: SelFont    -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
+# Font for clock
+*FvwmTaskBar: StatusFont -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
+
+*FvwmTaskBar: StartName Programs
+*FvwmTaskBar: StartMenu (Mouse 1) Quick-Menu
+*FvwmTaskBar: StartMenu (Mouse 2) Window-Ops
+*FvwmTaskBar: StartMenu (Mouse 3) System
+*FvwmTaskBar: StartButtonRightMargin 4
+#*FvwmTaskBar: StartCommand Popup Quick-Menu rectangle +100+100
+*FvwmTaskBar: ClockFormat %l:%M%p %h %e
+*FvwmTaskBar: DeskOnly
+*FvwmTaskBar: Button Icon mini/mini.display.xpm, Action exec Eterm
+*FvwmTaskBar: Button Icon mini/main-window16.xpm, Action exec "mozilla"
+

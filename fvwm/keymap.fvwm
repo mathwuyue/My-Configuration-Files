@@ -1,0 +1,37 @@
+############################################################################
+# Key Bindings
+# Example:
+# 
+# Key X Context Modifier Action
+# X for the key you use(A,B,C....)
+# Context: A for all, R for root, W for application window and 0-9 button bar, I for icon, F for frame border, S for frame side, T for title bar.
+# Modifer: (A)ny, (C)ontrol, (M)eta, (S)hift, (N)othing.
+#
+
+
+# press shift arrow + control anywhere, and move the pointer by 1% of a page
+Key Left	A	SC	CursorMove -1  +0
+Key Right	A	SC	CursorMove +1  +0
+Key Up		A	SC	CursorMove +0  -1
+Key Down	A	SC	CursorMove +0  +1
+
+# press shift arrow + meta key, and move the pointer by 1/10 of a page
+Key Left	A	SM	CursorMove -10  +0
+Key Right	A	SM	CursorMove +10  +0
+Key Up		A	SM	CursorMove +0  -10
+Key Down	A	SM	CursorMove +0  +10
+
+# Keyboard accelerators
+Key F1		A	SC	Popup "RootMenu"
+Key F2		A	SC	Popup "Window-Ops"
+Key F3		A	SC	Iconify
+Key F4		A	SC	Move
+Key F5		A	SC	Resize
+Key Left	A	MC	Next [*] focus
+Key Right	A	MC	Prev [*] focus
+Key X		A	MC	FvwmXTerm
+Key E		A	MC	FvwmEmacs
+Key B		A	MC	FvwmBrowser
+
+# keymap setting end up here  
+############################################################################

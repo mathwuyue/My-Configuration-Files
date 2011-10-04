@@ -1,0 +1,5 @@
++    "Tadg"	exec Eterm --name Darwin --title tadg --icon-name tadg -e ssh tadg
++    "Brigid"	exec Eterm --name SunOS_5.8 --title brigid --icon-name brigid -e ssh brigid
++    "Flower "	exec Eterm --name Darwin --title flower --icon-name flower -e ssh flower
++    "Aracnet"	exec Eterm --name ssh --title aracnet --icon-name aracnet -e ssh mokuren@shell.aracnet.com
++    "Charon"	exec Eterm --name ssh --title charon --icon-name charon -e ssh charon.mentorg.com

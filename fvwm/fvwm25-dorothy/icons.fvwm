@@ -1,0 +1,111 @@
+Style "*" Icon Unknown.xpm
+Style "*" NoIconOverride 
+Style "*" IconSize 48 48
+
+# These go early so they're overriden by more specific matches
+Style "Wish"   Icon tcl.png, MiniIcon mini/mini.tcl.xpm
+Style "tk*"    Icon tcl.png, MiniIcon mini/mini.tcl.xpm
+Style "*.tcl"  Icon tcl.png, MiniIcon mini/mini.tcl.xpm
+Style "Fvwm*"  Sticky, Icon gnome-tigert.png, MiniIcon mini/mini.f1.xpm, IconOverride
+
+Style "XTerm"  Icon gnome-color-xterm.xpm, MiniIcon mini/mini.display.xpm
+Style "Eterm"  Icon gnome-eterm.xpm, NoIconPosition, MiniIcon mini/mini.display.xpm, NoPPosition, IconOverride
+Style "Gnome*" Icon gnome-logo-icon.xpm, MiniIcon mini/mini.display.xpm
+Style "Gnome-terminal" Icon gnome-terminal.xpm, IconOverride
+Style "Dtterm"  Icon Dtterm.xpm, MiniIcon mini/mini.display.xpm
+Style "AIX_*"  Icon IBMMonitor.xpm, NoIconPosition, IconOverride
+Style "OSF1_*"  Icon DECMonitor.xpm, NoIconPosition, IconOverride
+Style "HP-UX*"  Icon HPMonitor.xpm, NoIconPosition, IconOverride
+Style "Darwin*"  Icon AppleMonitor.xpm, NoIconPosition, IconOverride
+Style "SunOS_4*"  Icon SunOSMonitor.xpm, NoIconPosition, IconOverride
+Style "SunOS_5*"  Icon SunMonitor.xpm, NoIconPosition, IconOverride
+Style "Linux_*"  Icon LinuxMonitor.xpm, NoIconPosition, IconOverride
+Style "FreeBSD_*" Icon BSDMonitor.xpm, NoIconPosition, IconOverride
+Style "ssh"  Icon SshMonitor.xpm, IconOverride, MiniIcon mini/mini.term.xpm
+Style "ModelCenter*" Icon CAD.xpm, NoPPosition
+Style "cwb*" Icon CAD.xpm, NoPPosition
+Style "drc*" Icon CalDRC-RVE.xpm
+Style "lvs*" Icon CalLVS-RVE.xpm
+Style "Calibre In*" Icon CalInteractive.xpm
+Style "FileViewer" Icon CalFileView.xpm
+Style "Pteam*" Icon EscherTriangle.xpm, MiniIcon mini/mini.triangle.xpm, NoPPosition, IconOverride
+Style "audiocontrol"  Icon sound48.xpm, IconOverride
+Style "soffice" Icon soffice.xpm
+Style "bubblemon" StartIconic, WindowListSkip
+Style "SUSEPlugger" WindowListSkip
+Style "SUSEWatcher" WindowListSkip
+
+# Side titlebar for main Gimp window and tearoff menus, icon for all windows
+Style "Gimp"  Icon gnome-gimp.png, MiniIcon mini/mini.gimp.xpm, IconOverride
+Style "GimpIcons"  Icon wilber.xpm, MiniIcon mini/mini.gimp.xpm
+Style "The GIMP" TitleAtLeft
+Style "gimp" TitleAtLeft
+
+# Side titlebar for main Xpaint window, icon for all windows
+Style "XPaint"  Icon PaintBrushSplash.xpm, IconOverride, TitleAtLeft
+Style "Canvas"  Icon PaintBrushSplash.xpm, IconOverride
+
+Style "Acqua" Icon acqua.xpm, NoPPosition, IconOverride, MiniIcon mini/mini.acqua.xpm, WindowListHit
+Style "Acroread"  Icon pdf.xpm, IconOverride, MiniIcon mini/mini.pdf.xpm, NoPPosition
+Style "Ddd" MiniIcon mini/mini.bug2.xpm
+Style "DDD*" MiniIcon mini/mini.bug2.xpm
+Style "Dtcalc"  Icon Dtcalc.xpm, IconOverride
+Style "Dtcm"  Icon ThreePeopleBehindPencilTablet.xpm, IconOverride
+Style "Dtfile"  Icon Folder.xpm
+Style "Dtpad"  Icon ClipboardWithPencilAndPaper.xpm
+Style "Emacs"  Icon gnus.xpm
+
+#Style "FvwmButtons"  NoHandles, BorderWidth 0, StaysOnBottom, Icon gnome-tigert.png
+Style "FvwmButtons"  Icon gnome-tigert.png
+Style "FvwmConsole"  Icon gnome-term-tiger.xpm, MiniIcon mini/mini.f1.xpm
+Style "FvwmIconBox" Slippery
+
+# The Gnome panel
+Style "Panel"  Sticky, NoTitle, NoHandles, HandleWidth 0, BorderWidth 0, WindowListSkip, StartsOnScreen 2
+Style "Gnome-panel"  Sticky, NoTitle, NoHandles, HandleWidth 0, BorderWidth 0, WindowListSkip, StartsOnScreen 2
+
+Style "Ghostview"  Icon AdobePostscript.xpm
+Style "opera"  Icon opera_sharp.xpm
+Style "Vmw*"  Icon vmware-workstation.png, MiniIcon mini/mini.vmware.xpm, IconOverride, StartsOnScreen 1
+Style "Pageview"  Icon AdobePostscript.xpm
+Style "Mozilla*" MiniIcon mini/mozicon16.xpm, IconOverride
+Style "navigator:browser" Icon firefox.xpm, MiniIcon mini/mini.firefox.xpm
+Style "Firefox*" Icon firefox.xpm, MiniIcon mini/mini.firefox.xpm, IconOverride
+Style "Evolution - Mail" Icon evolution.png, MiniIcon mini/mini.mail.xpm, IconOverride
+Style "konqueror" Icon konqueror.png, MiniIcon mini/konqueror.png, IconOverride
+Style "mail:*" Icon thunderbird.xpm, MiniIcon mini/mini.thunderbird.xpm
+Style "Pine"  Icon sketch-open-no-mail.xpm
+Style "RealPlayer"  Icon realplay.xpm
+Style "TkMan"  Icon BooksSideBySide.xpm, IconOverride, MiniIcon mini/mini.book3.xpm
+Style "TkSmb"  Icon network.png
+Style "Vncviewer"  Icon vnc48.xpm, MiniIcon mini/mini.vnc.xpm, StartsOnScreen 1
+Style "Vim"  Icon vim.xpm, NoPPosition, MiniIcon mini/vim16x16.xpm
+Style "Gv*" Icon vim.xpm, NoPPosition, MiniIcon mini/vim16x16.xpm
+Style "tixwish"  Icon tix.xpm, MiniIcon mini/mini.tcl.xpm
+Style "Workman"  Icon CDPlayer.xpm, IconOverride
+Style "choose*"  Icon ColorPalette.xpm, MiniIcon mini/mini.tcl.xpm
+Style "calibrewb"  Icon tcl.png, MiniIcon mini/mini.tcl.xpm
+Style "TkCVS*"  MiniIcon mini/fish16.xpm
+Style "CVS*"  MiniIcon mini/fish16.xpm
+Style "Tkdiff*"  MiniIcon mini/delta.xpm
+Style "modbrowse"  MiniIcon mini/fish16.xpm
+Style "xcalc"  MiniIcon mini/mini.calc2.xpm
+Style "xcmap"  Icon ColorPalette.xpm
+Style "xfontsel" Icon WoodenMPushpinNote.xpm
+Style "xftp"  Icon arrows2.xpm
+Style "xmag"  Icon Magnify.xpm, MiniIcon mini/mini.zoom.xpm
+Style "xmahjongg"  Icon gnome-fifteen.xpm
+Style "Xps"  MiniIcon mini/mini.eyes.xpm
+Style "Xsane"  Icon xsane-32x32.xpm, IconOverride
+Style "Xscanimage"  Icon xsane-32x32.xpm, IconOverride
+Style "XMMS*" NoTitle, Sticky, MiniIcon mini/mini.xmms.xpm Icon xmms-icon8.xpm, IconOverride
+Style "xv"  Icon XV.xpm, MiniIcon mini/mini.xv.xpm
+Style "YaST2*"  Icon susemenu.png, IconOverride
+#Style "Qsub*"  Icon grid48.xpm, MiniIcon mini/grid16a.xpm
+Style "Queue*"  MiniIcon mini/grid16a.xpm
+
+Style "Cadence*" MiniIcon mini/mini.cds.xpm
+Style "LSW" MiniIcon mini/mini.cds.xpm
+Style "Opus" MiniIcon mini/mini.cds.xpm
+
+

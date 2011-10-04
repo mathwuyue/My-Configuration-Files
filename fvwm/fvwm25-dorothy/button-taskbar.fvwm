@@ -1,0 +1,73 @@
+#FvwmButtons, combined with FvwmIconMan, makes a GREAT task bar
+#DestroyModuleConfig	FvwmButtons
+
+# Start Menu
+Style "FvwmButtons"     Sticky, NoTitle, NoHandles, BorderWidth 0, WindowListSkip, StaysOnBottom
+Style "FvwmIconMan"	Sticky, NoTitle, NoHandles, BorderWidth 0, WindowListHit
+
+# IconMan taskbar
+DestroyModuleConfig	FvwmIconMan
+
+# Color should match FvwmButtons
+*FvwmIconMan: 1 Colorset 0
+# Same as Inactive window
+*FvwmIconMan: 1 PlainColorset 0
+# Same as Active window
+*FvwmIconMan: 1 FocusColorset 1
+# The one highlighted on mouse-over.  Should have good readability.
+*FvwmIconMan: 1 SelectColorset 1
+
+*FvwmIconMan: 1 ReliefThickness 2
+*FvwmIconMan: 1 IconButton      Down
+*FvwmIconMan: 1 PlainButton     Up
+*FvwmIconMan: 1 FocusButton     RaisedEdge
+*FvwmIconMan: 1 SelectButton	Up
+
+*FvwmIconMan: 1 DrawIcons	always
+*FvwmIconMan: 1 Format		"%t"
+*FvwmIconMan: 1 ButtonGeometry	1024x25
+*FvwmIconMan: 1 ManagerGeometry	1x1
+*FvwmIconMan: 1 Resolution      Desk
+*FvwmIconMan: 1 FollowFocus	true
+
+*FvwmIconMan: 1 DontShow	class=FvwmButtons resource=FvwmPager
+#*FvwmIconMan: 1 DontShow	class=DClock resource=dclock
+
+*FvwmIconMan: action      Mouse   1 N sendcommand Focus, sendcommand "Iconify"
+*FvwmIconMan: action      Mouse   2 N sendcommand "Iconify 1"
+*FvwmIconMan: action      Mouse   3 N sendcommand "FvwmIdent"
+
+
+DestroyModuleConfig	FvwmButtons
+
+# FvwmButtons as Taskbar:
+*FvwmButtonsRows	1
+
+# This makes the background of the start button and tray
+*FvwmButtons: Colorset 1
+*FvwmButtons: Frame 0
+*FvwmButtons: ButtonGeometry +0+0
+
+# Start Button
+*FvwmButtons(5x1, Size 128 25, Container(Rows 1, Frame -1))
+    *FvwmButtons(Id start, 2x1, Padding 0, Frame 1, Icon buttons/feline-light.xpm, \
+        Action (Mouse 1) 'Menu Quick-Menu', \
+        Action (Mouse 2) 'Menu Window-Ops', \
+        Action (Mouse 3) 'Menu System)
+    *FvwmButtons(1x1, Padding 0, Frame 1, Icon mini/mini.display.xpm, \
+	Action 'Exec Eterm')
+    *FvwmButtons(1x1, Padding 0, Frame 1, Icon mini/mozicon16.xpm, \
+	Action 'Exec mozilla')
+    *FvwmButtons(1x1, Padding 0, Frame 1, Icon mini/mini.zoom.xpm, \
+	Action 'Exec xmag')
+*FvwmButtons(End)
+
+# Taskbar build with FvwmIconMan
+*FvwmButtons(32x1, Size 1024 25, Frame 0, Padding 0 0, \
+    Swallow "FvwmIconMan" "FvwmIconMan")
+
+# Clock
+*FvwmButtons(3x1, NoSize, Frame -1, Swallow 'xdaliclock' \
+      'Exec xdaliclock -noseconds -transparent -cycle -geometry 96x22 \
+      -fn "-adobe-symbol-medium-r-normal-*-*-240-*-*-p-*-adobe-*"')
+

@@ -1,0 +1,29 @@
+############################################################################
+# FvwmButtons
+#
+
+Colorset 8 fg white, bg #888888, fgsh black, RootTransparent Buffer, Tint #000000 50
+Style FvwmButtons NoTitle, StaysOnBottom, Sticky, WindowListSkip, CirculateSkipIcon, CirculateSkip
+Style FvwmButtons HandleWidth 2, NeverFocus, Layer 1
+
+*FvwmButtons: Colorset 8
+*FvwmButtonsFont -adobe-helvetica-bold-r-*-*-18-*-*-*-*-*-*-*
+*FvwmButtonsGeometry 864x56+0-0
+*FvwmButtonsRows 1
+
+*FvwmButtons Restart	fvwm.xpm	Restart
+*FvwmButtons Terminal	$[fvwm_icon]/term.png	Exec "xterm" $[fvwm_term] &
+*FvwmButtons Emacs	$[fvwm_icon]/emacs.png	Exec "Emacs" emacs -geometry =80x78-0+0 &
+*FvwmButtons Browser	$[fvwm_icon]/firefox.png	Exec "Browser" $[fvwm_browser]
+*FvwmButtons(Swallow XBiff 'Exec xbiff &')
+*FvwmButtons(Swallow(UseOld,NoKill) "xload" \
+	`Exec xload -title xload -bg SteelBlue3 -update 3 -nolabel &`)
+*FvwmButtons(Swallow XEyes 'Exec xeyes -center LightGrey &')
+*FvwmButtons(Size 36x1, Swallow XClock 'Exec xclock -d -twentyfour -fg white -bg SteelBlue3 &')
+*FvwmButtons(Swallow "FvwmPager")
+*FvwmButtons: (Title (Side) " Show Desktop", Left, Back #dedbde,\
+    Size 22x1, Action (Mouse 1) `All (AcceptsFocus CurrentPage !Iconic !Shaded) Thumbnail`)
+*FvwmButtons: (Title (Side) " Lock Screen", Left, Back #dedbde, \
+    Size 22x2, Action (Mouse 1) `Exec exec xscreensaver-command --lock`)
+
+

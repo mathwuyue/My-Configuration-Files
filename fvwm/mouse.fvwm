@@ -1,0 +1,35 @@
+#####################################################################
+# Mouse Configuration
+# Similar to Keyboard configuration
+# 
+# Mouse Button Contet Modifi Function
+# 1 left click, 2 for middle, 3 for right
+#
+
+# First, the root window. Button 1 brings up the Main Menu. B2 is the
+# window operations list, and B3 is the winlist module
+Mouse 1		R   	A       Menu RootMenu Nop
+Mouse 2		R    	A       Menu Window-Ops Nop
+Mouse 3		R    	A      	WindowList
+
+# Now, title bar buttons
+# Left button is the Window-Ops2 menu, right is iconify, rightmost is maximize
+#     Button	Context Modifi 	Function
+Mouse 0		1       A       Menu Window-Ops2 Close
+Mouse 0		2    	A     	Maximize-Func
+Mouse 0		4    	A     	Iconify
+
+# Button 1 in Frame or Sides is a resize-or-raise, in Icons is a move or 
+# de-iconify, and on Top does a move-or-raise
+#     Button	Context Modifi 	Function
+Mouse 1 	FS      A       Resize-or-Raise
+Mouse 1		I       A       Move-or-Iconify
+Mouse 1		T       A       Move-or-Raise
+
+# Button 2 in an Icon is de-iconify, in Corners/Sides/Titlebar gets Ops Menu
+#     Button	Context Modifi 	Function
+Mouse 2 	I       A       Iconify
+Mouse 2 	FST     A       Menu Window-Ops2 Nop
+
+# Button 3 does a raise-lower on anything
+Mouse 3 	TSIF    A       RaiseLower

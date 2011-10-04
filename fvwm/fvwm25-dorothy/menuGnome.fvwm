@@ -1,0 +1,33 @@
+DestroyMenu "Gnome-applications"
+AddToMenu "Gnome-applications" "Gnome applications" Title
++ "Help" Exec exec yelp
++ "Print Manager" Exec exec gnome-print-manager
++ "Terminal" Exec exec gnome-terminal
++ "GNOME Control Center" Exec exec gnome-control-center
++ "Home Folder" Exec exec nautilus
++ "Text Editor" Exec exec gedit 
++ "Eye of Gnome Image Viewer" Exec exec eog 
++ "Hex Editor" Exec exec ghex2 
++ "Performance Meter" Exec exec gnome-perfmeter
++ "Calculator" Exec exec gnome-calculator
++ "Character Map" Exec exec gnome-character-map
++ "Search for Files" Exec exec gnome-search-tool
++ "CD Player" Exec exec gnome-cd
++ "Sound Recorder" Exec exec gnome-sound-recorder
++ "Recording level monitor" Exec exec vumeter -r
++ "Volume monitor" Exec exec vumeter
++ "Glade Interface Designer" Exec exec glade-2
++ "Gataxx" Exec exec gataxx
++ "Glines" Exec exec glines
++ "Gnect" Exec exec gnect
++ "Gnibbles" Exec exec gnibbles
++ "Gnobots II" Exec exec gnobots2
++ "GNOME Stones" Exec exec gnome-stones
++ "Gnometris" Exec exec gnometris
++ "GNOME Mines" Exec exec gnomine
++ "Gnotravex" Exec exec gnotravex
++ "Gnotski" Exec exec gnotski
++ "GTali" Exec exec gtali
++ "Mahjongg" Exec exec mahjongg
++ "Same GNOME" Exec exec same-gnome
++ "Screensaver" Exec exec xscreensaver-demo --crapplet

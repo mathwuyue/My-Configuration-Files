@@ -1,0 +1,9 @@
++    "pevweb  Red Hat 7.0  1x300 MHz"   exec /user/dorothyr/bin/rpevweb
++    "foxfire  SunOS 5.8  2x900 MHz"    exec rEterm foxfire
++    "hopkins2 (SJ) SunOS 5.8  1x502 MHz"       exec rEterm hopkins2
++    "mangos (SJ) HPUX 11.00  2x? MHz"  exec rEterm mangos
++    "orchids (SJ) RedHat 8.0  2x2392 MHz"      exec rEterm orchids
++    "sunsvr6  SunOS 4.1.4"             exec rEterm sunsvr6
++    "Aracnet"  exec Eterm --name ssh --title aracnet --icon-name aracnet -e ssh mokuren@shell.aracnet.com
++    "Manannan" exec Eterm --name ssh --title manannan --icon-name manannan -e s sh dorothyr@216.99.209.149
+

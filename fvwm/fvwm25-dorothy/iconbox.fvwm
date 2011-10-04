@@ -1,0 +1,43 @@
+#traceon
+#ifndef(WIDTH, define(WIDTH,1280))
+#ifndef(HEIGHT, define(HEIGHT,1024))
+
+#define(M4_IconHeight, 80)
+#define(M4_IconWidth, 48)
+
+
+# Center right
+Style "*"	  IconBox 256x480-0+220@c, IconFill t r
+
+# Right top
+Style "Netscape" IconBox 114x192-0+32@p, IconFill t r
+Style "mozill*"  IconBox 114x192-0+32@p, IconFill t r
+Style "Mozill*"  IconBox 114x192-0+32@p, IconFill t r
+Style "*mail"	 IconBox 114x192-0+32@p, IconFill t r
+Style "Evolution"	 IconBox 114x192-0+32@c, IconFill t r
+Style "Firefox*"	 IconBox 114x192-0+32@c, IconFill t r
+
+# Right lower
+Style "*erm*"	 IconBox 114x320-0-5@c, IconFill t r
+# Except for the WORKbench shell
+Style "calibre*" IconBox 256x480-0+220@c, IconFill t r
+
+# Remote terms along bottom
+Style "AIX_*"	 IconBox  512x80-0-0@p, IconFill b r
+Style "OSF1_*"	 IconBox  512x80-0-0@p, IconFill b r
+Style "HP-UX*"	 IconBox  512x80-0-0@p, IconFill b r
+Style "SunOS*"	 IconBox  512x80-0-0@p, IconFill b r
+Style "Linux*"	 IconBox  512x80-0-0@p, IconFill b r
+Style "Darwin*"	 IconBox  512x80-0-0@p, IconFill b r
+Style "FreeBSD*" IconBox  512x80-0-0@p, IconFill b r
+Style "ssh"	 IconBox  512x80-0-0@p, IconFill b r
+
+# Lower left
+Style "Fvwm*"    IconBox 512x80+256-0@p, IconFill b l
+# Except
+Style "AcquaIcons" IconBox 256x480-0+220@p, IconFill t r
+Style "GimpIcons"  IconBox 256x480-0+220@p, IconFill t r
+
+# Second screen in Xinerama
+Style "Vmw*"	 IconBox  114x900-0+32@g, IconFill t r
+Style "Vnc*"	 IconBox  114x900-0+32@g, IconFill t r

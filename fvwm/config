@@ -82,7 +82,7 @@ OpaqueMoveSize 100
 #Style "*" RandomPlacement
 Style * TileCascadePlacement, MinOverlapPercentPlacement
 Style * DecorateTransient
-
+EwmhBaseStruts 0 0 0 36
 
 ###########################################################################
 # Virtual Desktops
@@ -123,7 +123,7 @@ AddToFunc StartFunction
 +	  I	Module	FvwmAnimate
 +	  I	Module	FvwmEvent
 +	  I	Test (Init)	Exec exec xscreensaver
-+	  I	Test (Init)	Exec exec fvwm-root --dither --retain-pixmap $[fvwm_wallpaper]
++	  I	Test (Init)	Exec exec feh --bg-scale $[fvwm_wallpaper]
 +	  I	Test (Init)	Exec exec tilda
 
 AddToFunc "RestartFunction" "I" Module FvwmButtons
